@@ -1,0 +1,4 @@
+# PyHomework requirements
+# No third-party Python packages were detected in the repository's imports.
+# If you add external libraries, list them here, for example:
+# requests==2.31.0
