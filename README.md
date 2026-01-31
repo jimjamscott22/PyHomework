@@ -98,10 +98,3 @@ No license file is included in the repository. If you want to open-source this p
 
 Repository owner: `jimjamscott22` (GitHub)
 
----
-
-If you'd like, I can also:
-
-- add a `requirements.txt` by detecting imported packages,
-- add a `LICENSE` (e.g., MIT),
-- or update the README with exact run instructions after you confirm which file (`main.py` or `app.py`) is the real entrypoint.

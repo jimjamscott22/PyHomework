@@ -46,7 +46,22 @@ def initialize_database():
             FOREIGN KEY (course_id) REFERENCES courses (id)
         )
     """)
-    
+
+    # Create user settings table
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS user_settings (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            setting_key TEXT UNIQUE NOT NULL,
+            setting_value TEXT NOT NULL,
+            created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+            updated_at TEXT DEFAULT CURRENT_TIMESTAMP
+        )
+    """)
+
     conn.commit()
     conn.close()
     print(f"Database initialized at: {DB_PATH}")
+
+    # Initialize default settings
+    from models.settings import Settings
+    Settings.initialize_defaults()
